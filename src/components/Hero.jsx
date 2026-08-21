@@ -1,0 +1,88 @@
+import React from 'react'
+
+/*
+  Hero section.
+  Left: headline + CTAs.
+  Right: a cinematic "screen" with animated lighting, floating glass
+  elements and a subtle particle field (pure CSS, no assets required).
+*/
+
+const Hero = () => {
+  const scrollTo = (id) => {
+    document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  return (
+    <section className="hero" id="home">
+      <div className="hero__bg" aria-hidden="true">
+        <div className="hero__orb hero__orb--1" />
+        <div className="hero__orb hero__orb--2" />
+        <div className="hero__grid" />
+      </div>
+
+      <div className="hero__container">
+        <div className="hero__content">
+          <span className="hero__eyebrow">AI Cinematic Studio for Hotels</span>
+          <h1 className="hero__title">
+            Turn Hotel Photos Into <span className="text-gold">Cinematic Experiences.</span>
+          </h1>
+          <p className="hero__subtitle">
+            We transform your hotel and room photos into cinematic, AI-powered
+            videos designed to attract guests and increase bookings.
+          </p>
+          <div className="hero__actions">
+            <button className="btn btn--gold" onClick={() => scrollTo('#portfolio')}>
+              View Our Work
+            </button>
+            <button className="btn btn--ghost" onClick={() => scrollTo('#contact')}>
+              Get Started
+            </button>
+          </div>
+
+          <div className="hero__stats">
+            <div className="hero__stat">
+              <strong>48h</strong>
+              <span>Delivery time</span>
+            </div>
+            <div className="hero__stat">
+              <strong>100%</strong>
+              <span>From your photos</span>
+            </div>
+            <div className="hero__stat">
+              <strong>4K</strong>
+              <span>Cinematic quality</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="hero__visual">
+          <div className="hero__screen glass">
+            <div className="hero__screen-fill" />
+            <div className="hero__screen-shine" />
+            <span className="hero__screen-tag">Cinematic Preview</span>
+            <button
+              className="hero__play"
+              aria-label="Play preview"
+              onClick={() => scrollTo('#portfolio')}
+            >
+              <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+                <path d="M8 5v14l11-7z" fill="currentColor" />
+              </svg>
+            </button>
+          </div>
+
+          <div className="hero__float hero__float--1 glass">✦ Motion</div>
+          <div className="hero__float hero__float--2 glass">4K Grading</div>
+          <div className="hero__float hero__float--3 glass">✺ Lighting</div>
+        </div>
+      </div>
+
+      <div className="hero__scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <span className="hero__scroll-line" />
+      </div>
+    </section>
+  )
+}
+
+export default Hero

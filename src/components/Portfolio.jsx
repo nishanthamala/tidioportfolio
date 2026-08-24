@@ -106,8 +106,14 @@ const Portfolio = () => {
       </div>
 
       <div className="portfolio__slider" id="portfolio-slider">
-        <div className="portfolio__track">
-          {[...portfolioVideos, ...portfolioVideos].map((item, i) => (
+        <div className={`portfolio__track ${portfolioVideos.length > 1 ? '' : 'portfolio__track--static'}`}>
+          {/* Duplicate the list only when there are multiple videos, so the
+              seamless right-to-left loop has no visible gap. With a single
+              video we show it once (no duplicate). */}
+          {(portfolioVideos.length > 1
+            ? [...portfolioVideos, ...portfolioVideos]
+            : portfolioVideos
+          ).map((item, i) => (
             <PortfolioCard key={`${item.title}-${i}`} item={item} onOpen={setActive} />
           ))}
         </div>

@@ -757,6 +757,12 @@ h3 {
   width: max-content;
   animation: portfolioScroll 48s linear infinite;
 }
+/* Single-video mode: show one card, no sliding duplicate */
+.portfolio__track--static {
+  animation: none;
+  width: 100%;
+  justify-content: center;
+}
 /* Pause on hover */
 .portfolio__slider:hover .portfolio__track {
   animation-play-state: paused;

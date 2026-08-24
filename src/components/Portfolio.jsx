@@ -14,9 +14,9 @@ import Reveal from './Reveal'
 
   Example entry:
   {
-    src: '/videos/hotel-room-1.mp4',         // path inside public/
-    poster: '/images/hotel-room-1.jpg',     // optional thumbnail
-    title: 'Luxury Suite'
+    src: '/videos/VID_20260824_165353.mp4', // path inside public/
+    poster: '/images/luxury-hotel-room-interior.jpeg', // optional thumbnail
+    title: 'Room Tour'
   }
 
   Notes:
@@ -28,14 +28,8 @@ import Reveal from './Reveal'
 */
 
 const portfolioVideos = [
-  { src: '/videos/hotel-room-1.mp4', poster: '/images/hotel-room-1.jpg', title: 'Luxury Suite' },
-  { src: '/videos/hotel-room-2.mp4', poster: '/images/hotel-room-2.jpg', title: 'Ocean View Room' },
-  { src: '/videos/hotel-overview.mp4', poster: '/images/hotel-overview.jpg', title: 'Hotel Overview' },
-  { src: '/videos/luxury-room.mp4', poster: '/images/luxury-room.jpg', title: 'Premium Room' },
-  { src: '/videos/hotel-room-3.mp4', poster: '/images/hotel-room-3.jpg', title: 'Lobby Ambience' },
-  { src: '/videos/hotel-room-4.mp4', poster: '/images/hotel-room-4.jpg', title: 'Executive Suite' },
-  { src: '/videos/hotel-spa.mp4', poster: '/images/hotel-spa.jpg', title: 'Spa & Wellness' },
-  { src: '/videos/hotel-restaurant.mp4', poster: '/images/hotel-restaurant.jpg', title: 'Fine Dining' }
+  // Add more entries by copying the line below and editing the fields.
+  { src: '/videos/VID_20260824_165353.mp4', poster: '/images/luxury-hotel-room-interior.jpeg', title: 'Room Tour' }
 ]
 
 const PortfolioCard = ({ item, onOpen }) => {

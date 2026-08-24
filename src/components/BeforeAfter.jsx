@@ -75,7 +75,12 @@ const BeforeAfter = () => {
 
             {/* BEFORE (photo) clipped to the slider position */}
             <div className="ba__before" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
-              <div className="ba__photo" />
+              {/* Replace src with your own "before" photo anytime. */}
+              <img
+                className="ba__photo"
+                src="/images/luxury-hotel-room-interior.jpeg"
+                alt="Hotel room interior photo"
+              />
               <span className="ba__label ba__label--before">Hotel Photo</span>
             </div>
 

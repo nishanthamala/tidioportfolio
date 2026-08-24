@@ -61,9 +61,10 @@ const BeforeAfter = () => {
           >
             {/* AFTER (video) sits underneath, revealed by the clip on top */}
             <div className="ba__after">
+              {/* Replace src with your own cinematic video anytime. Muted by default. */}
               <video
-                src="/videos/hotel-overview.mp4"
-                poster="/images/hotel-overview.jpg"
+                src="/videos/hotel-room-walkthrough.mp4"
+                poster="/images/luxury-hotel-room-interior.jpeg"
                 muted
                 loop
                 autoPlay

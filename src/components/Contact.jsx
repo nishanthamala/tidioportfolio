@@ -13,8 +13,8 @@ import Reveal from './Reveal'
 ============================================================================
 */
 
-const PHONE = '0870989098'
-const EMAIL = 'dfsd@gmail.com'
+const PHONE = '9361096733'
+const EMAIL = 'tediosupport24@gmail.com'
 const INSTAGRAM_URL = 'https://www.instagram.com/' // TODO: replace with your profile
 
 const FIELDS = [

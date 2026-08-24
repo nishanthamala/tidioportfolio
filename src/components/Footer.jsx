@@ -39,10 +39,10 @@ const Footer = () => {
           >
             Instagram
           </a>
-          <a href="mailto:dfsd@gmail.com" aria-label="Email">
+          <a href="mailto:tediosupport24@gmail.com" aria-label="Email">
             Email
           </a>
-          <a href="tel:0870989098" aria-label="Phone">
+          <a href="tel:9361096733" aria-label="Phone">
             Phone
           </a>
         </div>

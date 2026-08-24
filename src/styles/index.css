@@ -1237,6 +1237,10 @@ h3 {
   color: var(--gold-bright);
   font-size: 14.5px;
 }
+.contact__form-msg {
+  margin-top: 14px;
+  font-size: 14.5px;
+}
 
 /* =========================================================================
    FOOTER

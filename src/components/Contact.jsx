@@ -120,7 +120,7 @@ const Contact = () => {
           </Reveal>
 
           <Reveal className="contact__form-wrap">
-            <form className="glass contact__form" onSubmit={handleSubmit} noValidate>
+            <form className="glass contact__form" onSubmit={handleSubmit} noValidate autoComplete="off">
               {FIELDS.map((f) => (
                 <div className="contact__field" key={f.name}>
                   <label htmlFor={f.name}>{f.label}</label>

@@ -51,7 +51,7 @@ const Reviews = () => {
         <Reveal className="section__head">
           <span className="section__eyebrow">Reviews</span>
           <h2 className="section__title">
-            What <span className="text-gold">Hoteliers Say.</span>
+            What Our <span className="text-gold">Clients Say.</span>
           </h2>
           <p className="section__lead">
             Real feedback from the properties we've helped look their best.

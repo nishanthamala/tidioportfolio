@@ -24,11 +24,12 @@ const Hero = () => {
         <div className="hero__content">
           <span className="hero__eyebrow">Web Development + AI Video Production</span>
           <h1 className="hero__title">
-            Turn Hotel Photos Into <span className="text-gold">Cinematic Experiences.</span>
+            Build Your Brand. <span className="text-gold">Film Your Story.</span>
           </h1>
           <p className="hero__subtitle">
-            We transform your hotel and room photos into cinematic, AI-powered
-            videos designed to attract guests and increase bookings.
+            We build modern digital experiences and create cinematic AI-powered
+            videos that help businesses showcase their brand, property, products and
+            services.
           </p>
           <div className="hero__actions">
             <button className="btn btn--gold" onClick={() => scrollTo('#portfolio')}>
@@ -41,12 +42,12 @@ const Hero = () => {
 
           <div className="hero__stats">
             <div className="hero__stat">
-              <strong>48h</strong>
-              <span>Delivery time</span>
+              <strong>Web + Video</strong>
+              <span>Two core services</span>
             </div>
             <div className="hero__stat">
-              <strong>100%</strong>
-              <span>From your photos</span>
+              <strong>48h</strong>
+              <span>Typical delivery</span>
             </div>
             <div className="hero__stat">
               <strong>4K</strong>

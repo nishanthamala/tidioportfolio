@@ -5,31 +5,36 @@ import Reveal from './Reveal'
 ============================================================================
   PORTFOLIO — EDIT YOUR VIDEOS HERE
 ============================================================================
-  This is the ONLY place you need to touch to manage portfolio videos.
+  Category 1 (AI Video Production) is the original video reel. The slider,
+  its media and the `portfolioVideos` array below are unchanged in path/URL.
 
   HOW TO ADD / REPLACE A VIDEO:
   1. Drop your .mp4 file into:   public/videos/
   2. (Optional) Add a poster image into: public/images/
   3. Change the `src`, `title` and `poster` below.
 
-  Example entry:
-  {
-    src: '/videos/VID_20260824_165353.mp4', // path inside public/
-    poster: '/images/luxury-hotel-room-interior.jpeg', // optional thumbnail
-    title: 'Room Tour'
-  }
-
   Notes:
   - Videos are muted + looped by default (no autoplay sound).
   - Hovering the slider pauses the right-to-left motion.
   - Clicking a card opens it in a fullscreen lightbox.
-  - Add or remove entries freely; the slider adapts automatically.
 ============================================================================
 */
 
 const portfolioVideos = [
   // Add more entries by copying the line below and editing the fields.
   { src: '/videos/VID_20260824_165353.mp4', poster: '/images/luxury-hotel-room-interior.jpeg', title: 'Room Tour' }
+]
+
+/*
+  Category 2 (Web Development) — demo project cards.
+  These are clearly marked examples, NOT real client work.
+  Replace `title` values with your own projects when available.
+*/
+const webProjects = [
+  { title: 'Business Website', tag: 'Demo' },
+  { title: 'Hotel Website', tag: 'Demo' },
+  { title: 'Restaurant Website', tag: 'Demo' },
+  { title: 'Property Website', tag: 'Demo' }
 ]
 
 const PortfolioCard = ({ item, onOpen }) => {
@@ -89,7 +94,8 @@ const PortfolioCard = ({ item, onOpen }) => {
 }
 
 const Portfolio = () => {
-  const [active, setActive] = useState(null)
+  const [tab, setTab] = useState('video')
+  const [lightbox, setLightbox] = useState(null)
 
   return (
     <section className="section portfolio" id="portfolio">
@@ -97,44 +103,87 @@ const Portfolio = () => {
         <Reveal className="section__head">
           <span className="section__eyebrow">Portfolio</span>
           <h2 className="section__title">
-            See What Your <span className="text-gold">Photos Could Become.</span>
+            Web &amp; Video <span className="text-gold">Projects.</span>
           </h2>
           <p className="section__lead">
-            Hover to pause the reel. Click any video to watch it fullscreen.
+            Selected website projects and cinematic videos.
           </p>
         </Reveal>
-      </div>
 
-      <div className="portfolio__slider" id="portfolio-slider">
-        <div className={`portfolio__track ${portfolioVideos.length > 1 ? '' : 'portfolio__track--static'}`}>
-          {/* Duplicate the list only when there are multiple videos, so the
-              seamless right-to-left loop has no visible gap. With a single
-              video we show it once (no duplicate). */}
-          {(portfolioVideos.length > 1
-            ? [...portfolioVideos, ...portfolioVideos]
-            : portfolioVideos
-          ).map((item, i) => (
-            <PortfolioCard key={`${item.title}-${i}`} item={item} onOpen={setActive} />
-          ))}
+        <div className="portfolio__tabs">
+          <button
+            className={`portfolio__tab ${tab === 'video' ? 'is-active' : ''}`}
+            onClick={() => setTab('video')}
+          >
+            AI Video Production
+          </button>
+          <button
+            className={`portfolio__tab ${tab === 'web' ? 'is-active' : ''}`}
+            onClick={() => setTab('web')}
+          >
+            Web Development
+          </button>
         </div>
       </div>
 
-      {active && (
-        <div className="lightbox" onClick={() => setActive(null)}>
-          <button className="lightbox__close" aria-label="Close" onClick={() => setActive(null)}>
+      {tab === 'video' && (
+        <div className="portfolio__slider" id="portfolio-slider">
+          <div className={`portfolio__track ${portfolioVideos.length > 1 ? '' : 'portfolio__track--static'}`}>
+            {/* Duplicate the list only when there are multiple videos, so the
+                seamless right-to-left loop has no visible gap. With a single
+                video we show it once (no duplicate). */}
+            {(portfolioVideos.length > 1
+              ? [...portfolioVideos, ...portfolioVideos]
+              : portfolioVideos
+            ).map((item, i) => (
+              <PortfolioCard key={`${item.title}-${i}`} item={item} onOpen={setLightbox} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {tab === 'web' && (
+        <div className="container">
+          <div className="web-projects__grid">
+            {webProjects.map((p, i) => (
+              <Reveal key={p.title} delay={i * 90} className="web-projects__card-wrap">
+                <article className="glass web-project">
+                  <div className="web-project__mock" aria-hidden="true">
+                    <span className="web-project__dots">
+                      <i /><i /><i />
+                    </span>
+                    <span className="web-project__screen">W</span>
+                  </div>
+                  <div className="web-project__meta">
+                    <span className="web-project__title">{p.title}</span>
+                    <span className="web-project__badge">{p.tag} project</span>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+          <p className="web-projects__note">
+            Demo projects shown as examples — real client work can be added anytime.
+          </p>
+        </div>
+      )}
+
+      {lightbox && (
+        <div className="lightbox" onClick={() => setLightbox(null)}>
+          <button className="lightbox__close" aria-label="Close" onClick={() => setLightbox(null)}>
             ✕
           </button>
           <div className="lightbox__body glass" onClick={(e) => e.stopPropagation()}>
             <video
-              src={active.src}
-              poster={active.poster}
+              src={lightbox.src}
+              poster={lightbox.poster}
               controls
               autoPlay
               muted
               loop
               playsInline
             />
-            <div className="lightbox__title">{active.title}</div>
+            <div className="lightbox__title">{lightbox.title}</div>
           </div>
         </div>
       )}

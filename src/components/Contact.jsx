@@ -23,6 +23,13 @@ const FIELDS = [
   { name: 'phone', label: 'Phone', type: 'tel', placeholder: 'Your phone number', required: true },
   { name: 'email', label: 'Email', type: 'email', placeholder: 'you@hotel.com', required: true },
   { name: 'videos', label: 'Number of Videos', type: 'number', placeholder: 'e.g. 3', required: true, min: 1 },
+  {
+    name: 'service',
+    label: 'Needed Service',
+    type: 'select',
+    required: true,
+    options: ['AI Video Production', 'Web Development', 'AI Video Production + Web Development', 'Other']
+  },
   { name: 'message', label: 'Message', type: 'textarea', placeholder: 'Tell us about your property…', required: true }
 ]
 
@@ -126,6 +133,22 @@ const Contact = () => {
                       value={values[f.name] || ''}
                       onChange={handleChange}
                     />
+                  ) : f.type === 'select' ? (
+                    <select
+                      id={f.name}
+                      name={f.name}
+                      value={values[f.name] || ''}
+                      onChange={handleChange}
+                    >
+                      <option value="" disabled>
+                        Select a service
+                      </option>
+                      {f.options.map((o) => (
+                        <option key={o} value={o}>
+                          {o}
+                        </option>
+                      ))}
+                    </select>
                   ) : (
                     <input
                       id={f.name}

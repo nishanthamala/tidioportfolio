@@ -1,36 +1,38 @@
 import React from 'react'
 import Reveal from './Reveal'
 
-const FEATURES = [
+/*
+  About — tavonandtech as a Web Development + AI Video Production company.
+  Both services are given equal visual weight in two columns.
+*/
+
+const WEB_DEV = [
   {
-    icon: '📷',
-    title: 'No New Photoshoot Required',
-    text: 'We work from the photographs you already have. Skip the cost and logistics of a physical shoot.'
+    title: 'Business & Brand Websites',
+    text: 'Modern, fast websites that present your business professionally and turn visitors into customers.'
   },
   {
-    icon: '🎞️',
-    title: 'Cinematic Motion',
-    text: 'Still images are brought to life with tasteful, film-grade camera movement and pacing.'
+    title: 'Hotel, Resort & Property Sites',
+    text: 'Purpose-built sites for hotels, resorts and real estate with galleries, availability and enquiry forms.'
   },
   {
-    icon: '🎬',
-    title: 'Professional Editing',
-    text: 'Transitions, music, color grading and branding handled by our creative team.'
+    title: 'Responsive & Custom Systems',
+    text: 'Mobile-first, responsive builds with custom enquiry and contact systems tailored to your workflow.'
+  }
+]
+
+const VIDEO = [
+  {
+    title: 'Cinematic Room & Property Videos',
+    text: 'Turn photos into cinematic room and property walkthrough videos that feel like a premium film.'
   },
   {
-    icon: '📱',
-    title: 'Social-Media-Ready',
-    text: 'Delivered in the formats you need for Instagram, WhatsApp, websites and ads.'
+    title: 'Promotional & Social Videos',
+    text: 'Short, scroll-stopping videos for Instagram, WhatsApp and paid social.'
   },
   {
-    icon: '⚡',
-    title: 'Faster Production',
-    text: 'Get polished promotional videos in days, not weeks, without a crew on site.'
-  },
-  {
-    icon: '💎',
-    title: 'Affordable',
-    text: 'A fraction of the cost of traditional video production, with a premium result.'
+    title: 'AI Ads & Showcase Films',
+    text: 'AI-generated advertisements and product or service showcase films.'
   }
 ]
 
@@ -41,25 +43,47 @@ const About = () => {
         <Reveal className="section__head">
           <span className="section__eyebrow">About tavonandtech</span>
           <h2 className="section__title">
-            Your Photos. <span className="text-gold">Our AI.</span> A Cinematic Experience.
+            Web Development <span className="text-gold">+</span> AI Video Production.
           </h2>
           <p className="section__lead">
-            tavonandtech takes existing hotel photographs and transforms them into engaging
-            cinematic promotional videos — without requiring a new physical video shoot.
-            The result looks like a premium film, made from the images you already own.
+            tavonandtech combines modern web development with AI-powered cinematic video
+            production to help businesses build their digital presence and present their
+            brand professionally. We work with hotels, resorts, real estate and property
+            businesses, restaurants, startups, small and medium businesses, personal
+            brands and more.
           </p>
         </Reveal>
 
-        <div className="about__grid">
-          {FEATURES.map((f, i) => (
-            <Reveal key={f.title} delay={i * 80} className="about__card-wrap">
-              <article className="glass about__card">
-                <span className="about__icon">{f.icon}</span>
-                <h3 className="about__card-title">{f.title}</h3>
-                <p className="about__card-text">{f.text}</p>
-              </article>
-            </Reveal>
-          ))}
+        <div className="about__cols">
+          <div className="about__col">
+            <h3 className="about__col-title">Web Development</h3>
+            <div className="about__col-list">
+              {WEB_DEV.map((f, i) => (
+                <Reveal key={f.title} delay={i * 80} className="about__card-wrap">
+                  <article className="glass about__card">
+                    <span className="about__index">{String(i + 1).padStart(2, '0')}</span>
+                    <h3 className="about__card-title">{f.title}</h3>
+                    <p className="about__card-text">{f.text}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+
+          <div className="about__col">
+            <h3 className="about__col-title">AI Video Production</h3>
+            <div className="about__col-list">
+              {VIDEO.map((f, i) => (
+                <Reveal key={f.title} delay={i * 80} className="about__card-wrap">
+                  <article className="glass about__card">
+                    <span className="about__index">{String(i + 1).padStart(2, '0')}</span>
+                    <h3 className="about__card-title">{f.title}</h3>
+                    <p className="about__card-text">{f.text}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

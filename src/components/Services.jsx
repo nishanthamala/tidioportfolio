@@ -3,64 +3,120 @@ import Reveal from './Reveal'
 
 /*
   Service cards with subtle 3D tilt on hover (inline SVG icons, no deps).
+  Two equal categories: Web Development + AI Video Production.
 */
 
 const ICONS = {
-  tour: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M3 21V8l9-5 9 5v13" strokeLinejoin="round" />
-      <path d="M9 21v-6h6v6" strokeLinejoin="round" />
+  code: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 8l-4 4 4 4M15 8l4 4-4 4" />
     </svg>
   ),
-  overview: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <circle cx="12" cy="12" r="9" />
-      <path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" />
+  building: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 21V8l9-5 9 5v13" />
+      <path d="M9 21v-6h6v6M7 11h2M15 11h2M7 14h2M15 14h2" />
     </svg>
   ),
-  booking: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M5 4h14v16l-7-4-7 4z" strokeLinejoin="round" />
+  property: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 10l8-6 8 6M6 9v12h12V9" />
+      <path d="M10 21v-6h4v6" />
     </svg>
   ),
-  safety: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" strokeLinejoin="round" />
-      <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
+  portfolio: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="4" y="4" width="16" height="16" rx="2" />
+      <path d="M8 9h8M8 13h8M8 17h5" />
     </svg>
   ),
-  other: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M4 7h16M4 12h16M4 17h10" strokeLinecap="round" />
+  landing: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 3c3 3 5 6 5 9a5 5 0 0 1-10 0c0-3 2-6 5-9z" />
+      <path d="M12 12l3 3" />
+    </svg>
+  ),
+  restaurant: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 3v8a2 2 0 0 0 4 0V3M8 11v10M17 3c-2 0-3 2-3 5s1 4 3 4v9" />
+    </svg>
+  ),
+  responsive: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="5" width="12" height="8" rx="1" />
+      <rect x="16" y="12" width="5" height="8" rx="1" />
+      <path d="M7 13h1M18 5h1" />
+    </svg>
+  ),
+  contact: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="6" width="18" height="12" rx="2" />
+      <path d="M3 8l9 6 9-6" />
+    </svg>
+  ),
+  video: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="6" width="13" height="12" rx="2" />
+      <path d="M16 10l5-3v10l-5-3z" />
+    </svg>
+  ),
+  walkthrough: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 20c4-2 6-6 8-10M12 10c4 4 8 4 8 10" />
+      <circle cx="12" cy="10" r="2" />
+    </svg>
+  ),
+  film: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="M3 9h18M3 15h18M8 5v4M12 5v4M16 5v4M8 15v4M12 15v4M16 15v4" />
+    </svg>
+  ),
+  ad: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 9v6h4l5 4V5z" />
+      <path d="M17 9a4 4 0 0 1 0 6" />
+    </svg>
+  ),
+  social: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="7" cy="9" r="3" />
+      <circle cx="17" cy="8" r="2.5" />
+      <path d="M2 20c0-4 3-6 5-6s5 2 5 6M14 20c0-3 2-5 4-5s4 2 4 5" />
+    </svg>
+  ),
+  product: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 3l8 4v6c0 5-4 8-8 10-4-2-8-5-8-10V7z" />
+      <path d="M12 9v6" />
     </svg>
   )
 }
 
-const SERVICES = [
+const SERVICE_GROUPS = [
   {
-    icon: 'tour',
-    title: 'Full Room Tour',
-    text: 'Transform room photographs into a cinematic room walkthrough guests can feel.'
+    title: 'Web Development',
+    items: [
+      { icon: 'code', title: 'Business Websites', text: 'Modern, conversion-focused websites that present your brand professionally.' },
+      { icon: 'building', title: 'Hotel & Resort Websites', text: 'Tailored sites for hotels and resorts with galleries, availability and booking intent.' },
+      { icon: 'property', title: 'Property Websites', text: 'Real estate and property sites with walkthroughs, enquiries and lead capture.' },
+      { icon: 'portfolio', title: 'Portfolio Websites', text: 'Clean portfolio sites for personal brands, creatives and professionals.' },
+      { icon: 'landing', title: 'Landing Pages', text: 'High-converting landing pages for campaigns, launches and promotions.' },
+      { icon: 'restaurant', title: 'Restaurant Websites', text: 'Appetising sites for restaurants with menus, hours and reservations.' },
+      { icon: 'responsive', title: 'Responsive Websites', text: 'Mobile-first, fast and accessible across every device.' },
+      { icon: 'contact', title: 'Custom Enquiry/Contact Systems', text: 'Bespoke enquiry and contact systems wired to your workflow.' }
+    ]
   },
   {
-    icon: 'overview',
-    title: 'Hotel Overview',
-    text: 'Showcase the complete hotel experience — lobby, amenities, atmosphere and brand.'
-  },
-  {
-    icon: 'booking',
-    title: 'Booking Benefits',
-    text: 'Highlight exactly why guests should choose your hotel over the alternatives.'
-  },
-  {
-    icon: 'safety',
-    title: 'Safety & Protection',
-    text: 'Showcase hotel safety, security and protection features with calm, confident visuals.'
-  },
-  {
-    icon: 'other',
-    title: 'Other Services',
-    text: 'Create promotional videos for additional hotel facilities, events and services.'
+    title: 'AI Video Production',
+    items: [
+      { icon: 'video', title: 'Hotel Room Videos', text: 'Cinematic room videos generated from your existing photographs.' },
+      { icon: 'walkthrough', title: 'Property Walkthroughs', text: 'Smooth AI-powered walkthroughs for properties and venues.' },
+      { icon: 'film', title: 'Cinematic Promotional Videos', text: 'Premium promotional films that present your brand on every channel.' },
+      { icon: 'ad', title: 'AI-Generated Advertisements', text: 'Scroll-stopping AI ad films for social and paid campaigns.' },
+      { icon: 'social', title: 'Social Media Promotional Videos', text: 'Short videos built for Instagram, WhatsApp and more.' },
+      { icon: 'product', title: 'Product/Service Showcase Videos', text: 'Showcase videos that highlight your products and services.' }
+    ]
   }
 ]
 
@@ -87,7 +143,7 @@ const ServiceCard = ({ service, index }) => {
   }
 
   return (
-    <Reveal delay={index * 90} className="services__card-wrap">
+    <Reveal delay={index * 70} className="services__card-wrap">
       <article
         ref={ref}
         className="glass service-card"
@@ -110,19 +166,26 @@ const Services = () => {
         <Reveal className="section__head">
           <span className="section__eyebrow">Services</span>
           <h2 className="section__title">
-            Cinematic Videos for <span className="text-gold">Every Corner</span> of Your Hotel
+            Two Services. <span className="text-gold">One Studio.</span>
           </h2>
           <p className="section__lead">
-            A focused set of video packages built to make your property look its best
-            across every channel.
+            tavonandtech delivers both modern web development and AI-powered cinematic
+            video production — with equal care for each.
           </p>
         </Reveal>
 
-        <div className="services__grid">
-          {SERVICES.map((s, i) => (
-            <ServiceCard key={s.title} service={s} index={i} />
-          ))}
-        </div>
+        {SERVICE_GROUPS.map((group) => (
+          <div className="service-group" key={group.title}>
+            <Reveal>
+              <h3 className="service-group__title">{group.title}</h3>
+            </Reveal>
+            <div className="services__grid">
+              {group.items.map((s, i) => (
+                <ServiceCard key={s.title} service={s} index={i} />
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   )

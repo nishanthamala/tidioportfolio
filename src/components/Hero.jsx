@@ -46,8 +46,12 @@ const Hero = () => {
               <span>Two core services</span>
             </div>
             <div className="hero__stat">
-              <strong>48h</strong>
-              <span>Typical delivery</span>
+              <strong>48 Hours</strong>
+              <span>AI Video Production</span>
+            </div>
+            <div className="hero__stat">
+              <strong>Maximum 2 Weeks</strong>
+              <span>Web Development</span>
             </div>
             <div className="hero__stat">
               <strong>4K</strong>

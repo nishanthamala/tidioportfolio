@@ -1202,8 +1202,7 @@ h3 {
   letter-spacing: 0.4px;
 }
 .contact__field input,
-.contact__field textarea,
-.contact__field select {
+.contact__field textarea {
   width: 100%;
   padding: 13px 15px;
   border-radius: var(--radius-sm);
@@ -1214,6 +1213,19 @@ h3 {
   font-size: 15px;
   transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
   resize: vertical;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.contact__field select {
+  width: 100%;
+  padding: 13px 15px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 15px;
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
   appearance: none;
   -webkit-appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23c9a35f' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");

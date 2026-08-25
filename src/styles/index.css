@@ -1232,6 +1232,15 @@ h3 {
   background-repeat: no-repeat;
   background-position: right 15px center;
 }
+.contact__field select option {
+  color: #111;
+  background: #fff;
+}
+.contact__field select:invalid,
+.contact__field select option[value=''] {
+  color: var(--text-dim);
+  background: #fff;
+}
 .contact__field input::placeholder,
 .contact__field textarea::placeholder {
   color: var(--text-dim);

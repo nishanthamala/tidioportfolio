@@ -1,18 +1,18 @@
 import React from 'react'
 
 /*
-  TEDIO brand mark.
+  tavonandtech brand mark (T&T).
   ---------------------------------------------------------------
   This component is used everywhere the logo appears:
   Navbar, Preloader, Footer.
-  To rebrand, change the text "TEDIO" below and the gradient
+  To rebrand, change the text "T&T" below and the gradient
   colors in src/styles/index.css (look for .brand-logo / --gold).
 */
 
 const Logo = ({ variant = 'full', className = '' }) => {
   if (variant === 'mark') {
     return (
-      <span className={`brand-mark ${className}`} aria-label="TEDIO">
+      <span className={`brand-mark ${className}`} aria-label="tavonandtech">
         <svg viewBox="0 0 48 48" width="36" height="36" aria-hidden="true">
           <defs>
             <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
@@ -32,14 +32,15 @@ const Logo = ({ variant = 'full', className = '' }) => {
           />
           <text
             x="24"
-            y="34"
+            y="29"
             textAnchor="middle"
             fontFamily="Georgia, 'Times New Roman', serif"
-            fontSize="26"
+            fontSize="16"
             fontWeight="700"
+            letterSpacing="0.5"
             fill="url(#lg)"
           >
-            T
+            T&amp;T
           </text>
         </svg>
       </span>
@@ -47,7 +48,7 @@ const Logo = ({ variant = 'full', className = '' }) => {
   }
 
   return (
-    <span className={`brand-logo ${className}`} aria-label="TEDIO">
+    <span className={`brand-logo ${className}`} aria-label="tavonandtech">
       <span className="brand-logo__mark" aria-hidden="true">
         <svg viewBox="0 0 48 48" width="34" height="34">
           <defs>
@@ -68,19 +69,20 @@ const Logo = ({ variant = 'full', className = '' }) => {
           />
           <text
             x="24"
-            y="34"
+            y="29"
             textAnchor="middle"
             fontFamily="Georgia, 'Times New Roman', serif"
-            fontSize="26"
+            fontSize="16"
             fontWeight="700"
+            letterSpacing="0.5"
             fill="url(#lgf)"
           >
-            T
+            T&amp;T
           </text>
         </svg>
       </span>
       <span className="brand-logo__text">
-        TE<span className="brand-logo__accent">DIO</span>
+        T<span className="brand-logo__accent">&amp;</span>T
       </span>
     </span>
   )

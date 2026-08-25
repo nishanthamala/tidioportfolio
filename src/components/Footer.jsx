@@ -18,7 +18,8 @@ const Footer = () => {
         <div className="footer__brand">
           <Logo />
           <p className="footer__desc">
-            AI-powered cinematic videos for hotels and hospitality brands.
+            Web development and AI-powered cinematic videos for hotels and
+            hospitality brands.
           </p>
         </div>
 
@@ -49,7 +50,7 @@ const Footer = () => {
       </div>
 
       <div className="footer__bottom">
-        <div className="container">© 2026 TEDIO. All rights reserved.</div>
+        <div className="container">© 2026 tavonandtech. All rights reserved.</div>
       </div>
     </footer>
   )

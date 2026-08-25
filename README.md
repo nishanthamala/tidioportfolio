@@ -1,8 +1,7 @@
-# TEDIO — AI Hotel Video Production Website
+# tavonandtech — Web Development + AI Video Production
 
-A modern, premium React website for **TEDIO**, an AI-powered cinematic video
-studio for hotels and hospitality brands. Built with React + Vite, glassmorphism
-design, smooth scroll animations, and a right-to-left infinite portfolio reel.
+A modern, premium React website for **tavonandtech**, a web development and
+AI-powered cinematic video production studio for hotels and hospitality brands.
 
 ---
 
@@ -91,7 +90,7 @@ the same URL.
 
 ---
 
-## 6. Where to change the TEDIO logo / branding
+## 6. Where to change the tavonandtech logo / branding
 
 - **Logo component:** `src/components/Logo.jsx` (used in Navbar, Preloader, Footer).
 - **Favicon:** `public/favicon.svg` (replace with your own SVG).
@@ -103,7 +102,7 @@ the same URL.
 ## Project structure
 
 ```
-tedio/
+tavonandtech/
 ├── public/
 │   ├── videos/        ← put your .mp4 files here
 │   ├── images/        ← put posters / thumbnails here
@@ -130,4 +129,4 @@ tedio/
 
 ---
 
-© 2026 TEDIO. All rights reserved.
+© 2026 tavonandtech. All rights reserved.

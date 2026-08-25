@@ -1,9 +1,9 @@
 {
-  "name": "tedio",
+  "name": "tavonandtech",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "TEDIO — AI-powered cinematic videos for hotels and hospitality brands.",
+  "description": "tavonandtech — premium web development and AI-powered cinematic video production for hotels and hospitality brands.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

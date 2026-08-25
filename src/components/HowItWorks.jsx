@@ -10,7 +10,7 @@ const STEPS = [
   {
     number: '02',
     title: 'We Create',
-    text: 'TEDIO transforms the photos into cinematic, AI-powered visuals with refined motion.'
+    text: 'tavonandtech transforms the photos into cinematic, AI-powered visuals with refined motion.'
   },
   {
     number: '03',

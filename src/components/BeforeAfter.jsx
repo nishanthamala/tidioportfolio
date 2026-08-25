@@ -4,7 +4,7 @@ import Reveal from './Reveal'
 /*
   Before / After comparison.
   "Before" = a still hotel photo (placeholder gradient + poster).
-  "After"  = the TEDIO cinematic video.
+  "After"  = the tavonandtech cinematic video.
   Drag the handle to reveal the transformation.
 */
 
@@ -43,7 +43,7 @@ const BeforeAfter = () => {
           </h2>
           <p className="section__lead">
             Drag the handle to see the difference between a raw hotel photo and the
-            finished TEDIO cinematic video.
+            finished tavonandtech cinematic video.
           </p>
         </Reveal>
 
@@ -71,7 +71,7 @@ const BeforeAfter = () => {
                 playsInline
                 preload="none"
               />
-              <span className="ba__label ba__label--after">TEDIO Cinematic Video</span>
+              <span className="ba__label ba__label--after">tavonandtech Cinematic Video</span>
             </div>
 
             {/* BEFORE (photo) clipped to the slider position */}

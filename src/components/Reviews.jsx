@@ -30,7 +30,7 @@ const reviews = [
   //   hotel: 'Hotel / Property',
   //   role: 'Owner',
   //   rating: 5,
-  //   text: 'TEDIO transformed our photos into a stunning video…'
+  //   text: 'tavonandtech transformed our photos into a stunning video…'
   // }
 ]
 

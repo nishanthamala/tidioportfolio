@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     }
 
     const text = [
-      'New TEDIO inquiry',
+      'New tavonandtech inquiry',
       '',
       `Name:    ${name}`,
       `Email:   ${email}`,
@@ -51,10 +51,10 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        from: 'TEDIO <onboarding@resend.dev>',
+        from: 'tavonandtech <onboarding@resend.dev>',
         to: [toEmail],
         reply_to: email,
-        subject: `New TEDIO Inquiry — ${name}`,
+        subject: `New tavonandtech Inquiry — ${name}`,
         text
       })
     })

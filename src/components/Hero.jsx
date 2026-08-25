@@ -22,7 +22,7 @@ const Hero = () => {
 
       <div className="hero__container">
         <div className="hero__content">
-          <span className="hero__eyebrow">AI Cinematic Studio for Hotels</span>
+          <span className="hero__eyebrow">Web Development + AI Video Production</span>
           <h1 className="hero__title">
             Turn Hotel Photos Into <span className="text-gold">Cinematic Experiences.</span>
           </h1>

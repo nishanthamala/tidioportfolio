@@ -56,7 +56,7 @@ const Preloader = () => {
       <div className="preloader__glow" />
       <div className="preloader__inner">
         <Logo variant="mark" className="preloader__logo" />
-        <div className="preloader__name">TEDIO</div>
+        <div className="preloader__name">tavonandtech</div>
         <div className="preloader__bar">
           <span className="preloader__bar-fill" style={{ width: `${progress}%` }} />
         </div>

@@ -39,12 +39,12 @@ const About = () => {
     <section className="section about" id="about">
       <div className="container">
         <Reveal className="section__head">
-          <span className="section__eyebrow">About TEDIO</span>
+          <span className="section__eyebrow">About tavonandtech</span>
           <h2 className="section__title">
             Your Photos. <span className="text-gold">Our AI.</span> A Cinematic Experience.
           </h2>
           <p className="section__lead">
-            TEDIO takes existing hotel photographs and transforms them into engaging
+            tavonandtech takes existing hotel photographs and transforms them into engaging
             cinematic promotional videos — without requiring a new physical video shoot.
             The result looks like a premium film, made from the images you already own.
           </p>

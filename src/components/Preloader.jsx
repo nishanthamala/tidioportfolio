@@ -3,7 +3,7 @@ import Logo from './Logo'
 
 /*
   Premium preloader.
-  Shows the TEDIO logo with a progress bar and a soft glow,
+  Shows the tavonandtech logo with a progress bar and a soft glow,
   then fades smoothly into the site. Disappears automatically
   once the page has loaded (or after the simulated progress completes).
 */

@@ -22,7 +22,7 @@ import Reveal from './Reveal'
 
 const portfolioVideos = [
   { src: '/videos/VID_20260824_165353.mp4', poster: '/images/luxury-hotel-room-interior.jpeg', title: 'Room Tour' },
-  { src: '/videos/hotel-overview.mp4', title: 'Hotel Overview' }
+  { src: '/videos/hotel-room-walkthrough.mp4', poster: '/images/luxury-hotel-room-interior.jpeg', title: 'Luxury Room Video' }
 ]
 
 /*
@@ -64,7 +64,7 @@ const PortfolioCard = ({ item, onOpen }) => {
           muted
           loop
           playsInline
-          preload="none"
+          preload="metadata"
           loading="lazy"
         />
         <div className="portfolio__overlay">
@@ -128,14 +128,8 @@ const Portfolio = () => {
 
       {tab === 'video' && (
         <div className="portfolio__slider" id="portfolio-slider">
-          <div className={`portfolio__track ${portfolioVideos.length > 1 ? '' : 'portfolio__track--static'}`}>
-            {/* Duplicate the list only when there are multiple videos, so the
-                seamless right-to-left loop has no visible gap. With a single
-                video we show it once (no duplicate). */}
-            {(portfolioVideos.length > 1
-              ? [...portfolioVideos, ...portfolioVideos]
-              : portfolioVideos
-            ).map((item, i) => (
+          <div className="portfolio__track">
+            {portfolioVideos.map((item, i) => (
               <PortfolioCard key={`${item.title}-${i}`} item={item} onOpen={setLightbox} />
             ))}
           </div>

@@ -751,22 +751,21 @@ h3 {
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
-.portfolio__track {
-  display: flex;
-  gap: 22px;
-  width: max-content;
-  animation: portfolioScroll 48s linear infinite;
-}
-/* Single-video mode: show one card, no sliding duplicate */
-.portfolio__track--static {
-  animation: none;
-  width: 100%;
-  justify-content: center;
-}
-/* Pause on hover */
-.portfolio__slider:hover .portfolio__track {
-  animation-play-state: paused;
-}
+ .portfolio__track {
+   display: flex;
+   gap: 22px;
+   width: 100%;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ /* Single-video mode: show one card centered */
+ .portfolio__track--static {
+   justify-content: center;
+ }
+ /* Pause on hover */
+ .portfolio__slider:hover .portfolio__track {
+   /* no animation to pause */
+ }
 @keyframes portfolioScroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }

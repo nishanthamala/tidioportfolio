@@ -21,8 +21,8 @@ import Reveal from './Reveal'
 */
 
 const portfolioVideos = [
-  // Add more entries by copying the line below and editing the fields.
-  { src: '/videos/VID_20260824_165353.mp4', poster: '/images/luxury-hotel-room-interior.jpeg', title: 'Room Tour' }
+  { src: '/videos/VID_20260824_165353.mp4', poster: '/images/luxury-hotel-room-interior.jpeg', title: 'Room Tour' },
+  { src: '/videos/hotel-overview.mp4', title: 'Hotel Overview' }
 ]
 
 /*

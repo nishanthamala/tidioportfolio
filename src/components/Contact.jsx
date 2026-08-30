@@ -15,7 +15,7 @@ import Reveal from './Reveal'
 
 const PHONE = '9361096733'
 const EMAIL = 'tavonandtech@gmail.com'
-const INSTAGRAM_URL = 'https://www.instagram.com/' // TODO: replace with your profile
+const INSTAGRAM_URL = 'https://www.instagram.com/tavonandtech?igsi=dXk4cmdwd2JhdXNv' // TODO: replace with your profile
 
 const FIELDS = [
   { name: 'name', label: 'Name', type: 'text', placeholder: 'Your name', required: true },

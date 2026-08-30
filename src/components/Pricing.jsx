@@ -17,8 +17,8 @@ const PLANS = [
     name: 'PLAN 01',
     videos: '1 VIDEO',
     price: '₹899',
-    features: ['1 Full Room Tour'],
-    cta: 'Get Started',
+    features: ['1 Full Room Tour/overview'],
+    cta: 'Choose Plan',
     popular: false
   },
   {
@@ -26,27 +26,14 @@ const PLANS = [
     videos: '3 VIDEOS',
     price: '₹1,999',
     features: [
-      '1 Full Room Tour (incl. bathroom & other rooms)',
+      '1 Full Room Tour',
       'Hotel Overview',
-      'Benefits of Booking'
+      'Services in Hotel'
     ],
     cta: 'Choose Plan',
     popular: true
   },
-  {
-    name: 'PLAN 03',
-    videos: '4 VIDEOS',
-    price: '₹2,499',
-    features: [
-      '1 Full Room Tour (incl. bathroom & other rooms)',
-      'Hotel Overview',
-      'Benefits of Booking',
-      'Safety & Protection',
-      'Other Services Video'
-    ],
-    cta: 'Choose Plan',
-    popular: false
-  }
+ 
 ]
 
 const scrollToContact = () => {

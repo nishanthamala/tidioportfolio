@@ -22,7 +22,7 @@ import Reveal from './Reveal'
 
 const portfolioVideos = [
   { src: '/videos/VID_20260824_165353.mp4', poster: '/images/luxury-hotel-room-interior.jpeg', title: 'Room Tour' },
-  { src: '/videos/roomtour-2.mp4', poster: '/images/luxury-hotel-room-interior.jpeg', title: 'Room Tour 2' }
+  { src: '/videos/roomtour-2.mp4', poster: '/images/hote-overview.png', title: 'Room Tour 2' }
 ]
 
 /*

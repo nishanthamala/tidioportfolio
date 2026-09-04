@@ -16,7 +16,7 @@ const PLANS = [
   {
     name: 'PLAN 01',
     videos: '1 VIDEO',
-    price: '₹899',
+    price: '₹399',
     features: ['1 Full Room Tour/overview'],
     cta: 'Choose Plan',
     popular: false
@@ -24,7 +24,7 @@ const PLANS = [
   {
     name: 'PLAN 02',
     videos: '3 VIDEOS',
-    price: '₹1,999',
+    price: '₹999',
     features: [
       '1 Full Room Tour',
       'Hotel Overview',

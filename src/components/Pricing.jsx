@@ -15,20 +15,18 @@ import Reveal from './Reveal'
 const PLANS = [
   {
     name: 'PLAN 01',
-    videos: '1 VIDEO',
+    videos: '1 Reel + 1 Post',
     price: '₹399',
-    features: ['1 Full Room Tour/overview'],
+    features: ['1 Advertisement Reel & Post'],
     cta: 'Choose Plan',
     popular: false
   },
   {
     name: 'PLAN 02',
-    videos: '3 VIDEOS',
+    videos: '3 Reel + 3 Post',
     price: '₹999',
     features: [
-      '1 Full Room Tour',
-      'Hotel Overview',
-      'Services in Hotel'
+      '3 Advertaisement Reel & Post'
     ],
     cta: 'Choose Plan',
     popular: true

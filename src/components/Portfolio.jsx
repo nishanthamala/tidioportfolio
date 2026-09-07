@@ -24,6 +24,7 @@ const portfolioVideos = [
   { src: '/videos/construction.mp4', poster: '/images/congratulations img.png', title: 'ABC Constructions' },
   { src: '/videos/Education centre.mp4', poster: '/images/educational centre img.png', title: 'ABC Education' },
   { src: '/videos/hotel-service.mp4', poster: '/images/hotel-service.jpeg', title: 'ABC Hotel' },
+  
   { src: '/videos/seaview-resort.mp4', poster: '/images/seaview-resort.jpeg', title: 'Seaview Resort' },
 
 ]

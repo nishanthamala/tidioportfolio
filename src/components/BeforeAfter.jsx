@@ -1,13 +1,6 @@
 import React, { useRef, useState } from 'react'
 import Reveal from './Reveal'
 
-/*
-  Before / After comparison.
-  "Before" = a still hotel photo (placeholder gradient + poster).
-  "After"  = the tavonandtech cinematic video.
-  Drag the handle to reveal the transformation.
-*/
-
 const BeforeAfter = () => {
   const [pos, setPos] = useState(50)
   const containerRef = useRef(null)
@@ -39,11 +32,11 @@ const BeforeAfter = () => {
         <Reveal className="section__head">
           <span className="section__eyebrow">Before / After</span>
           <h2 className="section__title">
-            A Still Photo <span className="text-gold">Becomes a Film.</span>
+            See the <span className="text-gold">Difference.</span>
           </h2>
           <p className="section__lead">
-            Drag the handle to see the difference between a raw hotel photo and the
-            finished tavonandtech cinematic video.
+            Drag the handle to see how a polished digital presence can transform
+            how your business is perceived online.
           </p>
         </Reveal>
 
@@ -59,9 +52,7 @@ const BeforeAfter = () => {
             onTouchMove={onMove}
             onTouchEnd={onUp}
           >
-            {/* AFTER (video) sits underneath, revealed by the clip on top */}
             <div className="ba__after">
-              {/* Replace src with your own cinematic video anytime. Muted by default. */}
               <video
                 src="/videos/hotel-room-walkthrough.mp4"
                 poster="/images/luxury-hotel-room-interior.jpeg"
@@ -71,18 +62,16 @@ const BeforeAfter = () => {
                 playsInline
                 preload="none"
               />
-              <span className="ba__label ba__label--after">tavonandtech Cinematic Video</span>
+              <span className="ba__label ba__label--after">Professional Build</span>
             </div>
 
-            {/* BEFORE (photo) clipped to the slider position */}
             <div className="ba__before" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
-              {/* Replace src with your own "before" photo anytime. */}
               <img
                 className="ba__photo"
                 src="/images/luxury-hotel-room-interior.jpeg"
-                alt="Hotel room interior photo"
+                alt="Basic setup example"
               />
-              <span className="ba__label ba__label--before">Hotel Photo</span>
+              <span className="ba__label ba__label--before">Basic Setup</span>
             </div>
 
             <div className="ba__handle" style={{ left: `${pos}%` }}>

@@ -540,27 +540,6 @@ h3 {
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.3);
 }
-.hero__play {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 74px;
-  height: 74px;
-  border-radius: 50%;
-  border: 1px solid var(--glass-border-gold);
-  background: rgba(201, 163, 95, 0.15);
-  color: var(--gold-bright);
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  backdrop-filter: blur(6px);
-  transition: transform 0.3s var(--ease), background 0.3s var(--ease);
-}
-.hero__play:hover {
-  transform: translate(-50%, -50%) scale(1.08);
-  background: rgba(201, 163, 95, 0.3);
-}
 .hero__float {
   position: absolute;
   padding: 10px 16px;
@@ -641,7 +620,7 @@ h3 {
    ========================================================================= */
 .how__track {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
 .how__step {
@@ -1151,9 +1130,26 @@ h3 {
   width: 100%;
 }
 
+.pricing__custom {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 36px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.pricing__custom-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-soft);
+}
+
 /* =========================================================================
-   CONTACT
-   ========================================================================= */
+    CONTACT
+    ========================================================================= */
 .contact__grid {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -1484,9 +1480,22 @@ h3 {
   margin-top: 26px;
 }
 
+.portfolio__empty {
+  padding: 80px 24px;
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.portfolio__empty-text {
+  font-size: 15px;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
 /* =========================================================================
-   RESPONSIVE
-   ========================================================================= */
+    RESPONSIVE
+    ========================================================================= */
 @media (max-width: 1024px) {
   .about__grid,
   .services__grid {

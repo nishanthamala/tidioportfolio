@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="footer__brand">
           <Logo />
           <p className="footer__desc">
-            Web development and AI-powered cinematic videos for hotels, resorts,
+            Digital marketing and professional web development for hotels, resorts,
             real estate, restaurants and growing businesses.
           </p>
         </div>

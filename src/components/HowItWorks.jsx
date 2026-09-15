@@ -4,23 +4,28 @@ import Reveal from './Reveal'
 const STEPS = [
   {
     number: '01',
-    title: 'Send Your Photos',
-    text: 'The hotel sends existing room and interior photographs — the ones already on hand.'
+    title: 'Understand Your Requirements',
+    text: 'We learn about your business, goals, target audience and what you need to achieve online.'
   },
   {
     number: '02',
-    title: 'We Create',
-    text: 'tavonandtech transforms the photos into cinematic, AI-powered visuals with refined motion.'
+    title: 'Research & Strategy',
+    text: 'We research your market, competitors and opportunities to build a clear plan of action.'
   },
   {
     number: '03',
-    title: 'We Edit',
-    text: 'We add transitions, text, music, branding and professional editing to every video.'
+    title: 'Build / Execute',
+    text: 'We build your website or launch your marketing campaigns with precision and attention to detail.'
   },
   {
     number: '04',
-    title: 'You Promote',
-    text: 'Receive ready-to-use videos for Instagram, WhatsApp, websites and advertisements.'
+    title: 'Review & Refine',
+    text: 'We review the work with you, gather feedback and make refinements until it meets your standards.'
+  },
+  {
+    number: '05',
+    title: 'Quick Delivery & Launch',
+    text: 'We deliver a polished final product and launch it — so you can start seeing results fast.'
   }
 ]
 
@@ -31,7 +36,7 @@ const HowItWorks = () => {
         <Reveal className="section__head">
           <span className="section__eyebrow">How It Works</span>
           <h2 className="section__title">
-            From a Folder of Photos to a <span className="text-gold">Finished Film.</span>
+            A Simple Process That <span className="text-gold">Delivers.</span>
           </h2>
         </Reveal>
 

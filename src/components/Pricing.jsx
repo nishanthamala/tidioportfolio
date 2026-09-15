@@ -1,39 +1,6 @@
 import React from 'react'
 import Reveal from './Reveal'
 
-/*
-============================================================================
-  PRICING — CHANGE PRICES / PLANS HERE
-============================================================================
-  Edit the values below to update the pricing cards.
-  - `price`: the amount shown (string, so you can include ₹ and commas)
-  - `features`: the bullet list
-  - `popular`: set true to highlight a plan as "recommended"
-============================================================================
-*/
-
-const PLANS = [
-  {
-    name: 'PLAN 01',
-    videos: '1 Reel + 1 Post',
-    price: '₹399',
-    features: ['1 Advertisement Reel & Post'],
-    cta: 'Choose Plan',
-    popular: false
-  },
-  {
-    name: 'PLAN 02',
-    videos: '3 Reel + 3 Post',
-    price: '₹999',
-    features: [
-      '3 Advertaisement Reel & Post'
-    ],
-    cta: 'Choose Plan',
-    popular: true
-  },
- 
-]
-
 const scrollToContact = () => {
   document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
 }
@@ -45,39 +12,25 @@ const Pricing = () => {
         <Reveal className="section__head">
           <span className="section__eyebrow">Pricing</span>
           <h2 className="section__title">
-            Simple Plans. <span className="text-gold">Cinematic Results.</span>
+            Custom <span className="text-gold">Pricing.</span>
           </h2>
           <p className="section__lead">
-            Choose the number of videos you need. Every plan is built from your
-            existing photos.
+            Pricing is created affordably for each business according to their
+            preferences and requirements.
           </p>
         </Reveal>
 
-        <div className="pricing__grid">
-          {PLANS.map((plan, i) => (
-            <Reveal key={plan.name} delay={i * 100} className="pricing__card-wrap">
-              <article
-                className={`glass pricing__card ${plan.popular ? 'pricing__card--popular' : ''}`}
-              >
-                {plan.popular && <span className="pricing__badge">Most Popular</span>}
-                <span className="pricing__plan">{plan.name}</span>
-                <span className="pricing__videos">{plan.videos}</span>
-                <div className="pricing__price">{plan.price}</div>
-                <ul className="pricing__features">
-                  {plan.features.map((f) => (
-                    <li key={f}>
-                      <span className="pricing__check">✓</span>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <button className="btn btn--gold pricing__cta" onClick={scrollToContact}>
-                  {plan.cta}
-                </button>
-              </article>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal>
+          <div className="pricing__custom glass">
+            <p className="pricing__custom-text">
+              Every business is unique. We build custom packages tailored to your
+              goals, scope and budget — no rigid plans, no unnecessary extras.
+            </p>
+            <button className="btn btn--gold" onClick={scrollToContact}>
+              Discuss Your Requirements
+            </button>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

@@ -2,41 +2,30 @@ import React, { useState, useEffect, useRef } from 'react'
 import Reveal from './Reveal'
 
 /*
-============================================================================
   CONTACT — CHANGE CONTACT DETAILS & LINKS HERE
-============================================================================
-  Edit the values below:
-  - PHONE      : used for the clickable tel: link
-  - EMAIL      : used for the clickable mailto: link
-  - INSTAGRAM_URL : REPLACE with your real profile URL
-                  (leave as https://www.instagram.com/ until then)
-============================================================================
 */
 
 const PHONE = '9361096733'
 const EMAIL = 'tavonandtech@gmail.com'
-const INSTAGRAM_URL = 'https://www.instagram.com/tavonandtech?igsi=dXk4cmdwd2JhdXNv' // TODO: replace with your profile
+const INSTAGRAM_URL = 'https://www.instagram.com/tavonandtech?igsi=dXk4cmdwd2JhdXNv'
 
 const FIELDS = [
   { name: 'name', label: 'Name', type: 'text', placeholder: 'Your name', required: true },
-  { name: 'hotel', label: 'Hotel Name', type: 'text', placeholder: 'Your hotel / property', required: true },
   { name: 'phone', label: 'Phone', type: 'tel', placeholder: 'Your phone number', required: true },
-  { name: 'email', label: 'Email', type: 'email', placeholder: 'you@hotel.com', required: true },
-  { name: 'videos', label: 'Number of Videos', type: 'number', placeholder: 'e.g. 3', required: true, min: 1 },
+  { name: 'email', label: 'Email', type: 'email', placeholder: 'you@example.com', required: true },
   {
     name: 'service',
     label: 'Needed Service',
     type: 'select',
     required: true,
-    options: ['AI Video Production', 'Web Development', 'AI Video Production + Web Development', 'Other']
-  },
-  { name: 'message', label: 'Message', type: 'textarea', placeholder: 'Tell us about your property…', required: true }
+    options: ['Digital Marketing', 'Web Development', 'Both']
+  }
 ]
 
 const Contact = () => {
   const [values, setValues] = useState({})
   const [errors, setErrors] = useState({})
-  const [status, setStatus] = useState('idle') // 'idle' | 'success' | 'error'
+  const [status, setStatus] = useState('idle')
   const statusTimer = useRef(null)
 
   useEffect(() => () => clearTimeout(statusTimer.current), [])
@@ -55,7 +44,6 @@ const Contact = () => {
       if (f.type === 'email' && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
         next[f.name] = 'Enter a valid email'
       }
-      if (f.type === 'number' && val && Number(val) < 1) next[f.name] = 'Min 1'
     })
     return next
   }
@@ -77,13 +65,11 @@ const Contact = () => {
       })
       if (!res.ok) throw new Error('send failed')
 
-      // Success: show message for exactly 5 seconds, then hide + reset form
       setStatus('success')
       setValues({})
       setErrors({})
       statusTimer.current = setTimeout(() => setStatus('idle'), 5000)
     } catch {
-      // Email failed to send — do NOT show the success message
       setStatus('error')
     }
   }
@@ -94,7 +80,7 @@ const Contact = () => {
         <Reveal className="section__head">
           <span className="section__eyebrow">Contact</span>
           <h2 className="section__title">
-            Let's Create Something <span className="text-gold">Cinematic.</span>
+            Let's Build Something <span className="text-gold">Great.</span>
           </h2>
         </Reveal>
 
@@ -124,16 +110,7 @@ const Contact = () => {
               {FIELDS.map((f) => (
                 <div className="contact__field" key={f.name}>
                   <label htmlFor={f.name}>{f.label}</label>
-                  {f.type === 'textarea' ? (
-                    <textarea
-                      id={f.name}
-                      name={f.name}
-                      rows={4}
-                      placeholder={f.placeholder}
-                      value={values[f.name] || ''}
-                      onChange={handleChange}
-                    />
-                  ) : f.type === 'select' ? (
+                  {f.type === 'select' ? (
                     <select
                       id={f.name}
                       name={f.name}
@@ -155,7 +132,6 @@ const Contact = () => {
                       name={f.name}
                       type={f.type}
                       placeholder={f.placeholder}
-                      min={f.min}
                       value={values[f.name] || ''}
                       onChange={handleChange}
                     />

@@ -53,9 +53,9 @@ const BeforeAfter = () => {
             onTouchEnd={onUp}
           >
             <div className="ba__after">
-              <video
+              <img
                 src="/videos/hotel-room-walkthrough.mp4"
-                poster="/images/luxury-hotel-room-interior.jpeg"
+                poster="/images/aftert.png"
                 muted
                 loop
                 autoPlay
@@ -68,7 +68,7 @@ const BeforeAfter = () => {
             <div className="ba__before" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
               <img
                 className="ba__photo"
-                src="/images/luxury-hotel-room-interior.jpeg"
+                src="/images/beforet.png"
                 alt="Basic setup example"
               />
               <span className="ba__label ba__label--before">Basic Setup</span>

@@ -24,14 +24,12 @@ import Reveal from './Reveal'
 */
 
 const reviews = [
-  // Example (uncomment and edit, or add new objects):
-  // {
-  //   name: 'Guest Name',
-  //   hotel: 'Hotel / Property',
-  //   role: 'Owner',
-  //   rating: 5,
-  //   text: 'tavonandtech transformed our photos into a stunning video…'
-  // }
+  {
+    name: 'Om Muruga Construction',
+    hotel: 'Construction Company',
+    rating: 5,
+    text: 'Good work done by tavonandtech'
+  }
 ]
 
 const Stars = ({ rating = 5 }) => (

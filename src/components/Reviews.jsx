@@ -24,12 +24,21 @@ import Reveal from './Reveal'
 */
 
 const reviews = [
-  {
-    name: 'Om Muruga Construction',
-    hotel: 'Construction Company',
-    rating: 5,
-    text: 'Good work done by tavonandtech'
+     {
+       name: 'OM MURUGA CONSTRUCTION',
+       hotel: 'CONSTRUCTION COMPANY',
+       role: 'Owner',
+       rating: 5,
+       text: 'Good work by tavonandtech.'
+    },
+    {
+    name:   'ECR INN',        
+    hotel:  'BEACH HOUSE',  
+    role:   'Owner',             
+    rating: 5,                   
+    text:   'Nice work done by T&T' // required
   }
+
 ]
 
 const Stars = ({ rating = 5 }) => (

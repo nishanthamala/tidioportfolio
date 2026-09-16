@@ -1409,6 +1409,36 @@ h3 {
   border-color: var(--glass-border-gold);
   background: rgba(201, 163, 95, 0.12);
 }
+.portfolio__showcase {
+  display: flex;
+  justify-content: center;
+}
+.portfolio__item {
+  max-width: 720px;
+  width: 100%;
+  overflow: hidden;
+}
+.portfolio__item-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.25);
+}
+.portfolio__item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.portfolio__item-meta {
+  padding: 20px 24px;
+}
+.portfolio__item-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: var(--text);
+  line-height: 1.5;
+}
 .web-projects__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1478,19 +1508,6 @@ h3 {
   color: var(--text-dim);
   font-size: 13.5px;
   margin-top: 26px;
-}
-
-.portfolio__empty {
-  padding: 80px 24px;
-  text-align: center;
-  max-width: 520px;
-  margin: 0 auto;
-}
-
-.portfolio__empty-text {
-  font-size: 15px;
-  color: var(--text-soft);
-  line-height: 1.7;
 }
 
 /* =========================================================================

@@ -15,10 +15,15 @@ const Portfolio = () => {
           </p>
         </Reveal>
 
-        <div className="portfolio__empty glass">
-          <p className="portfolio__empty-text">
-            New projects will be showcased here shortly.
-          </p>
+        <div className="portfolio__showcase">
+          <div className="portfolio__item glass">
+            <div className="portfolio__item-image">
+              <img src="/images/om-muruga-construction.png" alt="Om Muruga Construction project by tavonandtech" />
+            </div>
+            <div className="portfolio__item-meta">
+              <span className="portfolio__item-title">Good work by tavonandtech -- by Om Muruga Construction</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

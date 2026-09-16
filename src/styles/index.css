@@ -1410,11 +1410,13 @@ h3 {
   background: rgba(201, 163, 95, 0.12);
 }
 .portfolio__showcase {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 .portfolio__item {
-  max-width: 520px;
   width: 100%;
   overflow: hidden;
 }
@@ -1532,6 +1534,11 @@ h3 {
   .web-projects__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .portfolio__showcase {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 860px) {
@@ -1608,6 +1615,9 @@ h3 {
     grid-template-columns: 1fr;
   }
   .web-projects__grid {
+    grid-template-columns: 1fr;
+  }
+  .portfolio__showcase {
     grid-template-columns: 1fr;
   }
   .portfolio__card {
